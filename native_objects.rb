@@ -113,3 +113,138 @@ p 2 ** 4 # => 16
 
 p 2 ** 5 # => 32
 
+
+
+# Ruby Time Methods
+
+# https://ruby-doc.org/core-2.5.1/Time.html
+
+# example one
+
+p Time.now # => 2018-07-31 11:00:00 -0400
+
+# example two
+
+p Time.now.year # => 2018
+
+# example three
+
+p Time.now.month # => 7
+
+# example four
+
+p Time.now.day # => 31
+
+# example five
+
+p Time.now.hour # => 11
+
+# example six
+
+p Time.now.min # => 0
+
+# example seven
+
+p Time.now.sec # => 0
+
+# example eight
+
+p Time.now.usec # => 0
+
+# example nine
+
+p Time.now.zone # => "EDT"
+
+# example ten
+
+p Time.now.wday # => 2
+
+# example eleven
+
+p Time.now.yday # => 212
+
+# example twelve
+
+p Time.now.dst? # => true
+
+# example thirteen
+
+p Time.now.sunday? # => false
+
+# example fourteen
+
+p Time.now.monday? # => false
+
+# example fifteen
+
+p Time.now.tuesday? # => true
+
+# example sixteen
+
+p Time.now.wednesday? # => false
+
+# create a new time object
+
+# example one
+
+p Time.new # => 2018-07-31 11:00:00 -0400
+
+# example two
+
+p Time.new(2018) # => 2018-01-01 00:00:00 -0500
+
+# example three
+
+p Time.new(2018, 7) # => 2018-07-01 00:00:00 -0400
+
+
+# other Time methods
+
+# example one
+
+p Time.now.to_i # => 1533032400
+
+
+# example two
+
+p Time.now.to_f # => 1533032400.0
+
+
+# example three
+
+p Time.now.to_r # => (1533032400/1)
+
+
+# example four
+
+p Time.now.to_s # => "2018-07-31 11:00:00 -0400"
+
+
+# example five
+
+p Time.now.to_a # => [0, 0, 11, 31, 7, 2018, 2, 212, true, "EDT"]   
+
+
+# example six
+
+p Time.now.to_h # => {:sec=>0, :min=>0, :hour=>11, :mday=>31, :mon=>7, :year=>2018, :wday=>2, :yday=>212, :isdst=>true, :zone=>"EDT"}
+
+
+# example seven
+
+p Time.now.to_datetime # => #<DateTime: 2018-07-31T11:00:00-04:00 ((2458320j,39600s,0n),-14400s,2299161j)>
+
+
+# example eight
+
+p Time.now.to_date # => #<Date: 2018-07-31 ((2458320j,0s,0n),+0s,2299161j)>
+
+
+# example nine
+
+p Time.now.to_time # => 2018-07-31 11:00:00 -0400
+
+
+# example ten
+
+p Time.now.to_datetime.to_time # => 2018-07-31 11:00:00 -0400
