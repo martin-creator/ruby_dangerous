@@ -248,3 +248,100 @@ p Time.now.to_time # => 2018-07-31 11:00:00 -0400
 # example ten
 
 p Time.now.to_datetime.to_time # => 2018-07-31 11:00:00 -0400
+
+
+# Ruby Regular Expressions
+
+# https://ruby-doc.org/core-2.5.1/Regexp.html
+
+# example one
+
+p /Ruby/ # => /Ruby/
+
+
+# example two
+
+p /Ruby/.class # => Regexp
+
+
+# Explain the common metacharacters used in regular expressions
+
+# example one
+
+p /Ruby/.match("The future is Ruby") # => #<MatchData "Ruby">
+
+
+# example two
+
+p /Ruby/.match("The future is Ruby")[0] # => "Ruby"
+
+
+# example three
+
+p /Ruby/.match("The future is Ruby")[1] # => nil
+
+
+# example four
+
+p /Ruby/.match("The future is Ruby")[2] # => nil
+
+
+# just list the meta characters and what they do
+
+# example one
+# \d - digit
+
+p /\d/.match("The future is Ruby") # => nil
+
+
+# example two
+# \D - non-digit
+# \s - whitespace
+# \S - non-whitespace
+# \w - word character
+# \W - non-word character
+# \b - word boundary
+# \B - non-word boundary
+# \A - beginning of string
+# \Z - end of string
+# \z - end of string
+# \G - end of last match
+# \n - newline
+# \t - tab
+# \e - escape
+# \f - form feed
+# \r - carriage return
+# \v - vertical tab
+# \p{UnicodePropertyName} - Unicode character property
+# \P{UnicodePropertyName} - negated Unicode character property
+# \p{^UnicodePropertyName} - negated Unicode character property
+# \X - extended Unicode sequence for grapheme clusters
+# \Q - escape all metacharacters until \E
+# \E - end \Q sequence
+# \c - control character
+# \C - not a control character
+# \u - 8-bit Unicode character (exact meaning determined by encoding)
+# \x - hex character x (exact meaning determined by encoding)
+# \x{hex} - Unicode character hex
+# \Q - quote metacharacters until \E
+# $ - end of line
+# ^ - start of line
+# . - any character except newline
+# ? - once or none
+# * - zero or more
+# + - one or more
+# {n} - n times
+# {n,} - n or more times
+# {,n} - up to n times
+# {m,n} - at least m times, but no more than n times
+# ( ) - capture everything enclosed
+# (?: ) - non-capturing group
+# (?<name> ) - named group
+# (?<name> ) - named group
+# [ ] - any character in the set
+# [^ ] - any character not in the set
+# | - alternation
+# \ - escape character
+# / - end of pattern
+# # - comment to end of line
+# (?# ) - comment to closing )
