@@ -345,3 +345,79 @@ p /\d/.match("The future is Ruby") # => nil
 # / - end of pattern
 # # - comment to end of line
 # (?# ) - comment to closing )
+
+
+# Ruby Hashes
+
+# https://ruby-doc.org/core-2.5.1/Hash.html
+
+# example one
+# create a new hash
+# hash literal
+
+# example one
+p {} # => {}
+
+# example two
+p {}.class # => Hash
+
+# example three
+p Hash.new # => {}
+
+# example four
+p Hash.new.class # => Hash
+
+# example five
+p Hash.new(0) # => {}
+
+# example six
+p Hash.new(0).class # => Hash
+
+# example seven
+p Hash.new(0).default # => 0
+
+# example eight
+p Hash.new(0).default.class # => Integer
+
+# example with elements
+
+# example one
+p { "a" => 1, "b" => 2 } # => {"a"=>1, "b"=>2}
+
+# example two
+p { "a" => 1, "b" => 2 }.class # => Hash
+
+# use hash rocket
+
+# example one
+p { :a => 1, :b => 2 } # => {:a=>1, :b=>2}
+
+# example two
+p { :a => 1, :b => 2 }.class # => Hash
+
+# access elements
+
+# example one
+p { "a" => 1, "b" => 2 }["a"] # => 1
+
+# example two
+p { "a" => 1, "b" => 2 }["b"] # => 2
+
+# example three
+p { "a" => 1, "b" => 2 }["c"] # => nil
+
+# use hash rocket to access elements
+
+# example one
+p { :a => 1, :b => 2 }[:a] # => 1
+
+# example two
+p { :a => 1, :b => 2 }[:b] # => 2
+
+
+# iterate over hashes
+
+# example one
+{ "a" => 1, "b" => 2 }.each { |k, v| p k, v } # => "a", 1, "b", 2
+
+# example two
