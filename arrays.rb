@@ -19,3 +19,26 @@
 # convert array to string
 
     p ["a", "b", "c"].join(", ") # => "a, b, c"
+
+
+# Array acces
+
+    p [1, 2, 3, 4, 5][0] # => 1
+
+# Array acces
+
+    p [1, 2, 3, 4, 5][1] # => 2
+
+# Array access different examples
+
+    p [1, 2, 3, 4, 5][0..2] # => [1, 2, 3]
+
+# Array use negative index
+
+    p [1, 2, 3, 4, 5][-1] # => 5
+
+# Array use negative index
+
+    p [1, 2, 3, 4, 5][-2] # => 4
+
+#
