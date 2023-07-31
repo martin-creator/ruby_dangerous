@@ -1,9 +1,9 @@
 require 'sinatra'
-
+require './date'
 
 # This is a Sinatra application
 get '/' do
-    'Hello world!'
+    'Hello, world! Happy ' + day_of_the_week(Time.now) + '.'
 end
 
 get '/about' do
