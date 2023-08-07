@@ -26,3 +26,7 @@ even_numbers = [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
 even_numbers.map { |n| puts "#{n * n} square"}
 final = even_numbers.map(&:even?)
 puts final
+
+even_odd_numbers = [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
+
+even_odd_numbers.select { |n| n.even? }
