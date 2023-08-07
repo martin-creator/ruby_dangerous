@@ -30,3 +30,12 @@ puts final
 even_odd_numbers = [ 2, 4, 6, 8, 10, 12, 14, 16, 18, 20 ]
 
 even_odd_numbers.select { |n| n.even? }
+
+
+# imperative programming is a programming where you tell the computer what to do and how to do it
+# declarative programming is a programming where you tell the computer what to do and what you want to be done
+
+
+numbers =  1..20
+
+numbers.reduce(0) { |sum, n| puts sum + n }
