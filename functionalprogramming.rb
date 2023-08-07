@@ -38,4 +38,5 @@ even_odd_numbers.select { |n| n.even? }
 
 numbers =  1..20
 
-numbers.reduce(0) { |sum, n| puts sum + n }
+sum = numbers.reduce(0) { |sum, n| sum + n }
+puts sum
