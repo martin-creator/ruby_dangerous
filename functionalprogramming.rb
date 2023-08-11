@@ -40,3 +40,35 @@ numbers =  1..20
 
 sum = numbers.reduce(0) { |sum, n| sum + n }
 puts sum
+
+## more examples with reduce
+
+# Find the product of all the elements in an array
+product = numbers.reduce(1) { |product, n| product * n }
+puts product
+
+# Find the largest element in an array
+max = numbers.reduce do |large, n|
+    if n > large
+        n
+    else
+        large
+    end
+end
+
+puts max
+
+# Find the longest word in an array
+longest = numbers.reduce do |longest, n|
+    if longest.length > n.length
+        longest
+    else
+        n
+    end
+end
+
+puts longest
+
+# Find the sum of all the elements in an array
+sum = numbers.reduce(0) { |sum, n| sum + n }
+puts sum 
