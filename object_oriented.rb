@@ -120,3 +120,92 @@ book4.price = 10
 puts book4.price
 
 
+#  create palindrome module
+module Palindrome
+    def palindrome?
+        processed_content == processed_content.reverse
+    end
+
+    private
+
+    def processed_content
+        self.to_s.downcase
+    end
+end
+
+# Example 6 modifying navite objects
+class String    
+    include Palindrome
+end
+
+puts "racecar".palindrome?
+puts "Madam, I'm Adam".palindrome?
+
+# Example 7 modifying navite objects
+class String    
+    include Palindrome
+end
+
+phrase = "Madam, I'm Adam"
+puts phrase.respond_to?(:palindrome?) # this checks if the method exists
+puts phrase.respond_to?(:downcase) # this checks if the method exists
+puts phrase.respond_to?(:length) # this checks if the method exists
+puts phrase.respond_to?(:odd?) # this checks if the method exists
+
+# Example 8 modifying navite objects
+class String    
+    include Palindrome
+end
+
+phrase = "Madam, I'm Adam"
+puts phrase.palindrome?
+puts phrase.length
+puts phrase.length % 2 != 0
+puts phrase.downcase
+
+# Example 9 modifying navite objects
+class String    
+    include Palindrome
+end
+
+phrase = "Madam, I'm Adam"
+puts phrase.palindrome?
+puts phrase.length
+# puts phrase.odd?
+puts phrase.downcase
+
+# Example 10 modifying navite objects
+class String    
+    include Palindrome
+end
+
+phrase = "Madam, I'm Adam"
+puts phrase.palindrome?
+puts phrase.length
+# puts phrase.odd?
+puts phrase.downcase
+
+# Example 11 modifying navite objects
+class String    
+    include Palindrome
+end
+
+phrase = "Madam, I'm Adam"
+puts phrase.palindrome?
+puts phrase.length
+# puts phrase.odd?
+puts phrase.downcase
+
+# Example 12 modifying navite objects
+class String    
+    include Palindrome
+end
+
+phrase = "Madam, I'm Adam"
+puts phrase.palindrome?
+puts phrase.length
+# puts phrase.odd?
+puts phrase.downcase
+
+
+
