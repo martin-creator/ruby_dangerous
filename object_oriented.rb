@@ -73,3 +73,50 @@ book2 = Book.new("Lord of the Rings", "Tolkein", 500)
 puts book2.title
 puts book2.author
 puts book2.pages
+
+# Example 4 using inheritance
+class BookStore < Book
+    attr_accessor :title, :author, :pages, :price, :bookstore_name
+    def initialize(title, author, pages, price)
+        super(title, author, pages) # this calls the initialize method in the Book class
+        @price = price
+        @bookstore_name = "Maro Bookstore"
+    end
+end
+
+book3 = BookStore.new("Harry Potter", "JK Rowling", 400, 20)
+puts book3.title
+puts book3.author
+puts book3.pages
+puts book3.price
+puts book3.bookstore_name
+
+# Example 5 using inheritance
+class BookStore < Book
+    attr_accessor :title, :author, :pages, :price, :bookstore_name
+    def initialize(title, author, pages, price)
+        super(title, author, pages) # this calls the initialize method in the Book class
+        @price = price
+        @bookstore_name = "Maro Bookstore"
+    end
+
+    def discount_price(discount)
+        @price - discount
+    end
+
+    def price=(price)
+        @price = price
+    end
+end
+
+book4 = BookStore.new("Harry Potter", "JK Rowling", 400, 20)
+puts book4.title
+puts book4.author
+puts book4.pages
+puts book4.price
+puts book4.bookstore_name
+puts book4.discount_price(5)
+book4.price = 10
+puts book4.price
+
+
