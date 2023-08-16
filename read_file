@@ -1,0 +1,5 @@
+#!/usr/bin/env ruby
+require "africa_palindrome"
+
+# Returns true for a palindrome, false otherwise.
+puts "Enter a word or phrase:"
