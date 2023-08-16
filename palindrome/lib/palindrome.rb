@@ -7,6 +7,9 @@ class String
     processed_content == processed_content.reverse
   end
 
+  def letters
+  end
+
   private
 
   def processed_content

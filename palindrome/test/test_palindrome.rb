@@ -8,7 +8,7 @@ class TestPalindrome < Minitest::Test
   end
 
   def test_for_non_palindrome
-    assert !"apple".palindrome?
+    refute "apple".palindrome?
   end
 
   def test_for_literal_palindrome
@@ -20,6 +20,10 @@ class TestPalindrome < Minitest::Test
   end
 
   def test_for_palindrome_with_punctuation
-    skip
+    assert "Madam, I'm Adam.".palindrome?
+  end
+
+  def test_letters
+    assert_equal "Madam, I am Adam.".letters == "MadamImAdam"
   end
 end
