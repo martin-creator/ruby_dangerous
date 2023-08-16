@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require "africa_palindrome"
+require "open-uri"
+
+# Returns true for a palindrome, false otherwise.
+lines = URI.open("https://cdn.learnenough.com/phrases.txt").readlines
+lines.each do |line|
+  if line.palindrome?
+    puts "#{line} is a palindrome."
+  end
+end
