@@ -10,3 +10,8 @@ text.split("\n").each do |line|
     puts "#{line} is not a palindrome."
   end
 end
+
+text = File.readlines("phrases.txt")
+text.each do |line|
+  puts line
+end
