@@ -2,4 +2,11 @@
 require "africa_palindrome"
 
 # Returns true for a palindrome, false otherwise.
-puts "Enter a word or phrase:"
+text = File.read("phrases.txt")
+text.split("\n").each do |line|
+  if line.palindrome?
+    puts "#{line} is a palindrome."
+  else
+    puts "#{line} is not a palindrome."
+  end
+end
