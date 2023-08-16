@@ -2,8 +2,8 @@
 require "africa_palindrome"
 
 # Returns true for a palindrome, false otherwise.
-text = File.read("phrases.txt")
-text.split("\n").each do |line|
+lines = File.readlines("phrases.txt")
+lines.each do |line|
   if line.palindrome?
     puts "#{line} is a palindrome."
   else
@@ -11,7 +11,11 @@ text.split("\n").each do |line|
   end
 end
 
-text = File.readlines("phrases.txt")
-text.each do |line|
-  puts line
-end
+# text = File.readlines("phrases.txt")
+# text.each do |line|
+#   puts line
+# end
+
+palindromes = lines.select { |line| line.palindrome? }
+p palindromes
+
