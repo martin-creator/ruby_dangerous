@@ -24,6 +24,6 @@ class TestPalindrome < Minitest::Test
   end
 
   def test_letters
-    assert_equal "Madam, I am Adam.".letters == "MadamImAdam"
+    assert_equal "MadamImAdman", "Madam, I'm Adam.".letters == "MadamImAdam"
   end
 end
