@@ -19,3 +19,5 @@ end
 palindromes = lines.select { |line| line.palindrome? }
 p palindromes
 
+File.write("palindromes_processed.txt", palindromes.join)
+
