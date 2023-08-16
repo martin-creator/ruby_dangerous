@@ -2,7 +2,16 @@
 
 require_relative "palindrome/version"
 
-module Palindrome
-  class Error < StandardError; end
-  # Your code goes here...
+class String
+  def palindrome?
+    processed_content == processed_content.reverse
+  end
+
+  private
+
+  def processed_content
+    self.to_s.downcase
+  end
 end
+
+# Your code goes here...
