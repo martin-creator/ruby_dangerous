@@ -19,6 +19,7 @@ class PalindromeAppTest < Minitest::Test
         get '/about'
         assert_equal 200, last_response.status
         assert last_response.ok?
+        assert doc(last_response).css('h1').first
         # assert_includes last_response.body, 'About Palindrome Detector'
     end
 
@@ -26,6 +27,7 @@ class PalindromeAppTest < Minitest::Test
         get '/palindrome'
         assert_equal 200, last_response.status
         assert last_response.ok?
+        assert doc(last_response).css('h1').first
         # assert_includes last_response.body, 'Palindrome Detector'
     end
 
