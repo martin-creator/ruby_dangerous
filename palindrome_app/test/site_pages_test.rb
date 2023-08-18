@@ -11,7 +11,9 @@ class PalindromeAppTest < Minitest::Test
         get '/'
         assert_equal 200, last_response.status
         assert last_response.ok?
-        assert doc(last_response).css('h1').first
+        #assert doc(last_response).css('h1').first
+        assert_equal "Palindrome App | Home ", doc(last_response).css('title').first.content
+        assert doc(last_response).css('nav').first
         # assert_includes last_response.body, 'Palindrome Detector'
     end
 
@@ -19,7 +21,9 @@ class PalindromeAppTest < Minitest::Test
         get '/about'
         assert_equal 200, last_response.status
         assert last_response.ok?
-        assert doc(last_response).css('h1').first
+        #assert doc(last_response).css('h1').first
+        assert_equal "Palindrome App | About ", doc(last_response).css('title').first.content
+        assert doc(last_response).css('nav').first
         # assert_includes last_response.body, 'About Palindrome Detector'
     end
 
@@ -27,7 +31,9 @@ class PalindromeAppTest < Minitest::Test
         get '/palindrome'
         assert_equal 200, last_response.status
         assert last_response.ok?
-        assert doc(last_response).css('h1').first
+        #assert doc(last_response).css('h1').first
+        assert_equal "Palindrome App | Play ", doc(last_response).css('title').first.content
+        assert doc(last_response).css('nav').first
         # assert_includes last_response.body, 'Palindrome Detector'
     end
 
