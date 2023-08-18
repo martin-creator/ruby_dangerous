@@ -6,16 +6,16 @@
     Enter a word to check if it is a palindrome
   </p>
   <form action="/palindrome" method="post">
-    <input type="text" name="word" class="border-2 border-gray-300 p-2 rounded-lg m-2" />
+    <input type="text" name="word" class="border-2 border-gray-300 p-2 rounded-lg m-2"required />
     <input type="submit" value="Check" class="border-2 border-gray-300 p-2 rounded-lg m-2" />
   </form>
-  <% if @phrase.palindrome?%>
+  <% if @phrase.palindrome? && @phrase != "" %>
     <p class="mt-3 text-2xl">
-      <%= "Yes, #{@phrase} is a palindrome" %>
+      <%= "Yes, <strong>#{@phrase}</strong> is a palindrome" %>
     </p>
   <% else %>
     <p class="mt-3 text-2xl">
-      <%= "No, #{@phrase} is not a palindrome" %>
+      <%= "No, <strong>#{@phrase}</strong> is not a palindrome" %>
     </p>
   <% end %>
 </div>
