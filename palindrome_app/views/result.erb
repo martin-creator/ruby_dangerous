@@ -1,0 +1,21 @@
+<div class="flex flex-col items-center justify-center min-h-screen py-2">
+  <h1 class="text-5xl font-bold">
+    Palindrome App
+  </h1>
+  <p class="mt-3 text-2xl">
+    Enter a word to check if it is a palindrome
+  </p>
+  <form action="/palindrome" method="post">
+    <input type="text" name="word" class="border-2 border-gray-300 p-2 rounded-lg m-2" />
+    <input type="submit" value="Check" class="border-2 border-gray-300 p-2 rounded-lg m-2" />
+  </form>
+  <% if @phrase.palindrome?%>
+    <p class="mt-3 text-2xl">
+      <%= "Yes, #{@phrase} is a palindrome" %>
+    </p>
+  <% else %>
+    <p class="mt-3 text-2xl">
+      <%= "No, #{@phrase} is not a palindrome" %>
+    </p>
+  <% end %>
+</div>
