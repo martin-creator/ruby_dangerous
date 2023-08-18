@@ -8,6 +8,6 @@ get '/about' do
     erb :about
 end
 
-get 'palindrome' do
+get '/palindrome' do
     erb :palindrome
 end

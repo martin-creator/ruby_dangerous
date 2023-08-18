@@ -2,3 +2,11 @@ source 'https://rubygems.org'
 
 gem 'sinatra', '~> 2.0.0' # Sinatra is a DSL for quickly creating web applications in Ruby with minimal effort
 gem 'rerun', '~> 0.11.0' # Restarts your app when the filesystem changes
+
+group :test do
+    gem 'minitest', '~> 5.10.1' # Minitest provides a complete suite of testing facilities supporting TDD, BDD, mocking, and benchmarking.
+    gem 'rack-test', '~> 0.6.3' # Rack::Test is a small, simple testing API for Rack apps.
+    gem 'minitest-reporters', '~> 1.1.14' # Minitest::Reporters gives you a variety of reporter options for your Minitest::Specs.
+    gem 'rake', '~> 12.0.0' # Rake is a Make-like program implemented in Ruby. Tasks and dependencies are specified in standard Ruby syntax.
+    gem 'nokogiri', '~>1.8.0' # Nokogiri (鋸) is an HTML, XML, SAX, and Reader parser. Among Nokogiri's many features is the ability to search documents via XPath or CSS3 selectors.
+end
